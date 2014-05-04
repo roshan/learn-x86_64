@@ -2,6 +2,8 @@
 .globl _start
 _start:
   subq $8, %rsp # Re-align stack pointer to a multiple of 16 bytes.
+  # We subtract because we want to move the stack pointer into empty space
+  # and the stack grows top to bottom
 
   movq $60, %rax # Choose sys_exit syscall
   movq $1, %rdi # Set error code to 1
