@@ -20,7 +20,7 @@ $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
 clean:
-	rm $(BIN_DIR)/*.o
+	rm $(BIN_DIR)/*.o -f
 	for exe in $(EXECUTABLES) ; do \
-    rm $(BIN_DIR)/$$exe.bin ; \
+    rm $(BIN_DIR)/$$exe.bin -f; \
   done
